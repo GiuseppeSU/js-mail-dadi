@@ -5,16 +5,18 @@ let numeroUtente = Math.floor(Math.random() * 6) + 1;
 console.log(numeroUtente)
 let numeroComputer = Math.floor(Math.random() * 6) + 1;
 console.log(numeroComputer)
-let somma = numeroComputer + numeroUtente;
-let risultato;
-if (somma >=8) {
+
+if (numeroUtente > numeroComputer) {
     risultato = "Vinci";
     document.getElementById('result').innerHTML = 'Complimenti hai vinto';
     document.getElementById("result").classList.add('green')
-} else {
+} else if(numeroComputer > numeroUtente){
     risultato = "Perdi";
     document.getElementById('result2').innerHTML = 'Ritenta sarai più fortunato!';
     document.getElementById("result2").classList.add('red')
+}else{
+    document.getElementById('result3').innerHTML = 'Pareggio!';
+    
 }
 })
 
